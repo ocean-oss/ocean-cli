@@ -1,0 +1,20 @@
+#!/bin/sh
+
+command=$1
+
+export url=${OCEAN_URL:-"https://cloud.ocean.dev"}
+
+shift
+
+case $command in
+  "apps:validate")
+    commands/apps/validate.sh "$@"
+    ;;
+  "apps:yaml")
+    commands/apps/yaml.sh "$@"
+    ;;
+  *)
+    echo "Unknown command."
+    exit 1
+    ;;
+esac
