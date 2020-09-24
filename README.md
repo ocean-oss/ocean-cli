@@ -5,7 +5,7 @@ This is a development version of the CLI based on shell scripts.
 ## Setup
 
 ```shell
-https://github.com/ocean-oss/ocean-cli.git
+git clone git@github.com:ocean-oss/ocean-cli.git
 cd ocean-cli
 chmod -R 700 .
 ```
