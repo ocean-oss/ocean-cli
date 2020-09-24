@@ -12,11 +12,11 @@ chmod -R 700 .
 
 ## Environment Variables
 
-### OCEAN_URL (optional)
+### `OCEAN_URL` (optional)
 
 If you need a proxy to Ocean set this variables.
 
-### OCEAN_ACCESS_TOKEN (required)
+### `OCEAN_ACCESS_TOKEN` (required)
 
 Set this variable to your access token from Ocean.
 
