@@ -22,7 +22,7 @@ Set this variable to your access token from Ocean.
 
 ## Commands
 
-### ocean apps:yaml app_id
+### `ocean apps:yaml app_id`
 
 Download app YAML with a specific app ID. To download it into a file run:
 
@@ -30,6 +30,6 @@ Download app YAML with a specific app ID. To download it into a file run:
 ocean apps:yaml app_id > my_app.yaml
 ```
 
-### ocean apps:validate path_to_app_yaml
+### `ocean apps:validate path_to_app_yaml`
 
 Validate YAML against the API.
