@@ -69,6 +69,10 @@ Create a new app on Ocean from your current local directory.
 
 Update an existing app with an `app_id`.
 
+### `ocean apps:delete app_id`
+
+Delete an existing app with an `app_id`.
+
 ### `ocean apps:show`
 
 Show app metadata response from the API.

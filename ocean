@@ -19,6 +19,9 @@ case $command in
   "apps:update")
     "$CURRENT_DIR"/commands/apps/update.sh "$@"
     ;;
+  "apps:delete")
+    "$CURRENT_DIR"/commands/apps/delete.sh "$@"
+    ;;
   "apps:show")
     "$CURRENT_DIR"/commands/apps/show.sh "$@"
     ;;
