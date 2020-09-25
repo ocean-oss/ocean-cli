@@ -42,7 +42,7 @@ ocean apps:validate
 Once you are ready to push your changes run:
 
 ```shell
-ocean apps:update
+ocean apps:update <app_id>
 ```
 
 ## Environment Variables
@@ -73,7 +73,7 @@ Update an existing app with an `app_id`.
 
 Delete an existing app with an `app_id`.
 
-### `ocean apps:show`
+### `ocean apps:show app_id`
 
 Show app metadata response from the API.
 
