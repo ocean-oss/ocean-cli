@@ -6,6 +6,6 @@ then
   exit 1
 else
   curl -X GET \
-    -H "Authorization: bearer ${OCEAN_ACCESS_TOKEN}"\
-    $OCEAN_URL/api/v1/apps/$1
+    -H "Authorization: bearer ${OCEAN_ACCESS_TOKEN}" \
+    "$OCEAN_URL"/api/v1/apps/"$1"
 fi

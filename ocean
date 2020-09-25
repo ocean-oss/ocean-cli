@@ -2,7 +2,7 @@
 
 set -e
 
-export CURRENT_DIR=$(dirname $0)
+export CURRENT_DIR=$(dirname "$0")
 export OCEAN_URL=${OCEAN_URL:-"https://cloud.ocean.dev"}
 export BASE_APP="git@github.com:ocean-oss/base-app.git"
 
@@ -11,16 +11,16 @@ shift
 
 case $command in
   "apps:init")
-    $CURRENT_DIR/commands/apps/init.sh "$@"
+    "$CURRENT_DIR"/commands/apps/init.sh "$@"
     ;;
   "apps:show")
-    $CURRENT_DIR/commands/apps/show.sh "$@"
+    "$CURRENT_DIR"/commands/apps/show.sh "$@"
     ;;
   "apps:validate")
-    $CURRENT_DIR/commands/apps/validate.sh "$@"
+    "$CURRENT_DIR"/commands/apps/validate.sh "$@"
     ;;
   "apps:yaml")
-    $CURRENT_DIR/commands/apps/yaml.sh "$@"
+    "$CURRENT_DIR"/commands/apps/yaml.sh "$@"
     ;;
   *)
     echo "Unknown command."
