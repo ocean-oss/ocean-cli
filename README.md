@@ -35,6 +35,10 @@ Set this variable to your Ocean access token. Obtain a new token from https://cl
 
 Create a new app in the current directory. This command initializes a git repository and pulls content from https://github.com/ocean-oss/base-app.
 
+### `ocean apps:show`
+
+Show app metadata response from the API.
+
 ### `ocean apps:yaml app_id`
 
 Download YAML for a specific Ocean app that you have access to. To download it into a file run:
@@ -43,6 +47,6 @@ Download YAML for a specific Ocean app that you have access to. To download it i
 ocean apps:yaml app_id > my_app.yaml
 ```
 
-### `ocean apps:validate path_to_app_yaml`
+### `ocean apps:validate`
 
-Validate YAML against the API.
+Validate YAML in the current against the API. Provide a path to the YAML file via an optional argument.
