@@ -16,6 +16,9 @@ case $command in
   "apps:create")
     "$CURRENT_DIR"/commands/apps/create.sh "$@"
     ;;
+  "apps:update")
+    "$CURRENT_DIR"/commands/apps/update.sh "$@"
+    ;;
   "apps:show")
     "$CURRENT_DIR"/commands/apps/show.sh "$@"
     ;;

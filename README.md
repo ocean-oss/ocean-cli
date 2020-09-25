@@ -65,6 +65,10 @@ Initialize a new app in the current directory. This command creates a local git 
 
 Create a new app on Ocean from your current local directory.
 
+### `ocean apps:create app_id`
+
+Update an existing app with an `app_id`.
+
 ### `ocean apps:show`
 
 Show app metadata response from the API.
