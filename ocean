@@ -25,6 +25,9 @@ case $command in
   "apps:validate")
     "$CURRENT_DIR"/commands/apps/validate.sh "$@"
     ;;
+  "apps:download")
+    "$CURRENT_DIR"/commands/apps/download.sh "$@"
+    ;;
   *)
     echo "Unknown command."
     exit 1

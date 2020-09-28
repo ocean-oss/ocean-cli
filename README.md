@@ -85,6 +85,10 @@ Delete an existing app with an `app_name`.
 
 Show app metadata response from the API.
 
+### `ocean apps:download app_name`
+
+Downloads a zip file with the app contents and unzips it in the current directory. This is one way to "fork" an existing app.
+
 ### `ocean apps:validate app_name`
 
 Validate app YAML without updating the app on Ocean.
