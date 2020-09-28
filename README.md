@@ -19,21 +19,31 @@ export OCEAN_ACCESS_TOKEN=your_token
 alias ocean="path_to_ocean/ocean-cli/ocean"
 ```
 
-## Getting Started
-
-First, initialize an app in your current directory:
+To update the CLI:
 
 ```shell
-ocean apps:init
+cd ocean-cli
+git pull origin master
+chmod -R 700 .
 ```
 
-Next, create the app on Ocean:
+## Getting Started
+
+First, create an app on Ocean:
 
 ```shell
+mkdir app_name
+cd app_name
 ocean apps:create app_name true
 ```
 
-Now, you can start working on your app. After modifying your app YAML, it's a good idea to validate it before updating the app:
+Then, clone an existing app into the current directory with git or build everything from scratch:
+
+```shell
+git clone git@github.com:ocean-oss/base-app.git .
+```
+
+Now, you can start working on your app. After modifying app YAML, it's a good idea to validate it before updating the app:
 
 ```shell
 ocean apps:validate app_name
@@ -56,10 +66,6 @@ Use this variable to setup a custom proxy for the Ocean API. Useful for developm
 Set this variable to your Ocean access token. Obtain a new token from https://cloud.ocean.dev/access_tokens
 
 ## All Commands
-
-### `ocean apps:init`
-
-Initialize a new app in the current directory. This command creates a local git repository and fills it with content from https://github.com/ocean-oss/base-app.
 
 ### `ocean apps:create app_name is_public`
 
