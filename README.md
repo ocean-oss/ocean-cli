@@ -15,8 +15,8 @@ chmod -R 700 .
 Now, configure the CLI to your liking:
 
 ```shell
-export OCEAN_ACCESS_TOKEN=<your_token>
-alias ocean="<path_to_ocean>/ocean-cli/ocean"
+export OCEAN_ACCESS_TOKEN=your_token
+alias ocean="path_to_ocean/ocean-cli/ocean"
 ```
 
 ## Getting Started
@@ -42,7 +42,7 @@ ocean apps:validate app_name
 Once you are ready to push your changes run:
 
 ```shell
-ocean apps:update <app_id>
+ocean apps:update app_id
 ```
 
 ## Settings
