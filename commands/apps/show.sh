@@ -2,7 +2,7 @@ export file=${1:-"app.yaml"}
 
 if [ -z "$1" ]
 then
-  echo "Provide an app ID."
+  echo "Provide an app name."
   exit 1
 else
   curl -X GET \

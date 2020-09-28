@@ -1,14 +1,15 @@
-archive_name="app.zip"
-
-rm_archive() {
-  rm "$archive_name"
-}
-
-git archive -o "$archive_name" --format zip HEAD
-
-trap "rm_archive" EXIT
-
-curl -X POST \
-  -H "Authorization: bearer ${OCEAN_ACCESS_TOKEN}" \
-  -F "file=@$archive_name;type=application/zip" \
-  "$OCEAN_URL"/api/v1/apps
+if [ -z "$1" ]
+then
+  echo "Provide an app name."
+  exit 1
+elif [ -z "$2" ]
+then
+  echo "Provide is_public property."
+  exit 1
+else
+  curl -X POST \
+    -H "Authorization: bearer ${OCEAN_ACCESS_TOKEN}" \
+    -H "Content-Type: application/json" \
+    --data "{\"name\": \"$1\", \"public\": \"$2\"}" \
+    "$OCEAN_URL"/api/v1/apps
+fi

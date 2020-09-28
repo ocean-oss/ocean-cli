@@ -30,13 +30,13 @@ ocean apps:init
 Next, create the app on Ocean:
 
 ```shell
-ocean apps:create
+ocean apps:create app_name true
 ```
 
-Now, you can start working on your app. After modifying the app YAML, it's a good idea to validate it:
+Now, you can start working on your app. After modifying your app YAML, it's a good idea to validate it before updating the app:
 
 ```shell
-ocean apps:validate
+ocean apps:validate app_name
 ```
 
 Once you are ready to push your changes run:
@@ -45,7 +45,7 @@ Once you are ready to push your changes run:
 ocean apps:update <app_id>
 ```
 
-## Environment Variables
+## Settings
 
 ### `OCEAN_URL` (optional)
 
@@ -61,30 +61,22 @@ Set this variable to your Ocean access token. Obtain a new token from https://cl
 
 Initialize a new app in the current directory. This command creates a local git repository and fills it with content from https://github.com/ocean-oss/base-app.
 
-### `ocean apps:create`
+### `ocean apps:create app_name is_public`
 
-Create a new app on Ocean from your current local directory.
+Create a new app on Ocean with a specific name and public/private property.
 
-### `ocean apps:create app_id`
+### `ocean apps:update app_name`
 
-Update an existing app with an `app_id`.
+Update an existing app with an `app_name`.
 
-### `ocean apps:delete app_id`
+### `ocean apps:delete app_name`
 
-Delete an existing app with an `app_id`.
+Delete an existing app with an `app_name`.
 
-### `ocean apps:show app_id`
+### `ocean apps:show app_name`
 
 Show app metadata response from the API.
 
-### `ocean apps:yaml app_id`
+### `ocean apps:validate app_name`
 
-Show YAML for any Ocean app that your account can access. To download it into a file run:
-
-```shell
-ocean apps:yaml app_id > my_app.yaml
-```
-
-### `ocean apps:validate`
-
-Validate YAML in the current against the API. Provide a path to the YAML file via an optional argument.
+Validate app YAML without updating the app on Ocean.

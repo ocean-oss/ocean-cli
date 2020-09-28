@@ -6,7 +6,7 @@ rm_archive() {
 
 if [ -z "$1" ]
 then
-  echo "Provide an app ID."
+  echo "Provide an app name."
   exit 1
 else
   git archive -o "$zipfile_name" --format zip HEAD
