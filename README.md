@@ -54,7 +54,7 @@ Once you are ready to push your changes, commit them to git and then update your
 ```shell
 git add .
 git commit -m "Adding new changes"
-ocean apps:update app_id
+ocean apps:update app_name
 ```
 
 ## Settings
