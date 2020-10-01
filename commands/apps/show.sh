@@ -1,5 +1,3 @@
-export file=${1:-"app.yaml"}
-
 if [ -z "$1" ]
 then
   echo "Provide an app name."

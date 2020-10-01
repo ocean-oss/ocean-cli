@@ -49,12 +49,10 @@ Now, you can start working on your app. After modifying app YAML, it's a good id
 ocean apps:validate app_name
 ```
 
-Once you are ready to push your changes, commit them to git and then update your app on Ocean:
+Once you are ready to push your changes, update your app on Ocean with a commit message:
 
 ```shell
-git add .
-git commit -m "Adding new changes"
-ocean apps:update app_name
+ocean apps:update app_name "Adding new changes"
 ```
 
 ## Settings
@@ -73,9 +71,9 @@ Set this variable to your Ocean access token. Obtain a new token from https://cl
 
 Create a new app on Ocean with a specific name and public/private property.
 
-### `ocean apps:update app_name`
+### `ocean apps:update app_name commit_message`
 
-Update an existing app with an `app_name`. Don't forget to commit your changes to git first.
+Update an existing app with an `app_name`. The second argument `commit_message` is optional and is used as a git commit message.
 
 ### `ocean apps:delete app_name`
 

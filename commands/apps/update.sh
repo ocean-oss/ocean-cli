@@ -1,4 +1,5 @@
 zipfile_name="app.zip"
+commit_message=${2:-"Updating app."}
 
 rm_archive() {
   rm "$zipfile_name"
@@ -13,6 +14,8 @@ else
     echo "Provide an app name."
     exit 1
   else
+    git add .
+    git commit -m "$commit_message"
     git archive -o "$zipfile_name" --format zip HEAD
 
     trap "rm_archive" EXIT
